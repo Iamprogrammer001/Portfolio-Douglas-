@@ -1,51 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Douglas - Portfolio</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <button id="darkModeToggle">Dark Mode</button>
+
   <header>
-    <h1>Douglas Kipruto</h1>
+    <h1><span id="typedName" class="typing"></span></h1>
     <p>Contact: +254758652363 | Email: kiprutodouglas3@gmail.com</p>
+    <div class="social-icons">
+      <a href="https://twitter.com/onlineworker001" target="_blank"><img src="assets/icons/twitter.png" alt="Twitter"></a>
+      <a href="https://tiktok.com/@D_G🇰🇪🇬🇧" target="_blank"><img src="assets/icons/tiktok.png" alt="TikTok"></a>
+    </div>
+    <a href="Douglas_CV.pdf" download class="cv-btn">Download CV</a>
   </header>
 
   <section id="about">
     <h2>About Me</h2>
-    <p>I'm a dedicated coder with expertise in error handling, code editing, and debugging. I work from home, delivering high-quality code with a focus on performance and maintainability.</p>
+    <p>I'm a dedicated coder with expertise in error handling, code editing, and debugging.</p>
   </section>
 
   <section id="skills">
     <h2>Skills</h2>
-    <ul>
-      <li>HTML, CSS, JavaScript</li>
-      <li>React, Node.js</li>
-      <li>Error Handling & Debugging</li>
-      <li>Version Control (Git)</li>
-      <li>API Integration</li>
-      <li>Responsive Web Design</li>
-    </ul>
+    <div class="skill-bar"><div class="skill-fill" data-percent="90%">HTML, CSS, JavaScript</div></div>
+    <div class="skill-bar"><div class="skill-fill" data-percent="80%">React, Node.js</div></div>
+    <!-- More skills -->
   </section>
 
   <section id="projects">
     <h2>Projects</h2>
-    <p>Check out some of my work:</p>
-    <ul>
-      <li><a href="#">Project 1 - Web App</a></li>
-      <li><a href="#">Project 2 - Personal Blog</a></li>
-      <li><a href="#">Project 3 - E-commerce Site</a></li>
-    </ul>
+    <div class="project-card" onclick="showAlert('Web App')">Project 1 - Web App</div>
+    <div class="project-card" onclick="showAlert('Personal Blog')">Project 2 - Personal Blog</div>
+    <div class="project-card" onclick="showAlert('E-commerce Site')">Project 3 - E-commerce Site</div>
   </section>
 
   <section id="contact">
     <h2>Contact</h2>
-    <p>Feel free to reach out if you're interested in working together!</p>
-    <form action="#" method="post">
-      <input type="text" placeholder="Your Name" required><br>
-      <input type="email" placeholder="Your Email" required><br>
-      <textarea placeholder="Your Message" required></textarea><br>
+    <form id="contactForm">
+      <input type="text" id="name" placeholder="Your Name" required><br>
+      <input type="email" id="email" placeholder="Your Email" required><br>
+      <textarea id="message" placeholder="Your Message" required></textarea><br>
       <button type="submit">Send Message</button>
     </form>
   </section>
@@ -53,5 +51,9 @@
   <footer>
     <p>&copy; 2025 Douglas Kipruto. All rights reserved.</p>
   </footer>
+
+  <button id="backToTop" onclick="scrollToTop()">Back to Top</button>
+
+  <script src="script.js"></script>
 </body>
 </html>
